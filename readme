@@ -1,0 +1,39 @@
+・何ですかこれは
+ Sinatraで作ったBBSです
+
+・起動に必要なもの
+ 多分以下で十分だと思いますが、もしかしたら足りないかもしれません
+ 動かなければrailsをインストールすれば動くと思います
+
+ - ruby周り
+  ActiveRecord
+  ERB
+  Sinatra
+  will_paginate
+  WEBrick
+ 
+ - 他
+  mysql
+
+・起動準備
+ ローカルホストに sinatra_bbs というデータベースを作成
+ その後、マイグレーションを以下のコマンドで実行
+ % rake db:migrate
+
+ DB定義は config/database.yml でしてあります
+ sqliteでも動くとは思いますが未確認です
+
+・起動方法
+ % sudo gem install activerecord erb sinatra will_paginate
+ % ruby start.rb -p 3000
+
+ sinatraは0.9.2ではファイルの自動再読み込みが出来なくなったので
+ ソースをいじる場合は再読み込みをサポートするshotgunでの起動を推奨します
+
+ % sudo gem install shotgun
+ % shotgun start.rb -p 3000
+
+ -p オプションを付けないと4567ポートが使われます
+ 3000ポートを使っているのはなんとなくrailsに合わせているだけです
+
+ あとは http://localhost:3000/ へアクセス

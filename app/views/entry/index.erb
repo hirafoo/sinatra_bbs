@@ -1,0 +1,26 @@
+<div>
+<b><p>entry register</p></b>
+<form method="post" action="/entry/register">
+<table border="1">
+<tr><td>content</td><td><input type="text" name="post[content]" /></td></tr>
+</table>
+<input type="submit" value="送信" />
+</form>
+</div>
+
+<div>
+<table border="1">
+    <tr><th class="nav">id</th><th>user</th><th>content</th></th>
+
+    <% for entry in @entries %>
+      <tr><td class="centering nav"><%= entry.id %></a></td><td><%=h entry.user.name %></td><td><%=h entry.content %></td></tr>
+    <% end %>
+
+</table>
+
+<% unless @prev == 0  %>
+<a href="/entry/?page=<%= @prev %>">prev</a>
+<% end %>
+<a href="/entry/?page=<%= @next %>">next</a>
+
+</div>

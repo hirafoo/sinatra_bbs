@@ -1,0 +1,67 @@
+html {
+    background-color: #DDD;
+}
+
+div {
+    border: 1px solid #666;
+    margin: 10px;
+    padding: 10px;
+}
+
+.ma {
+    margin: 10px;
+}
+.mv {
+    margin: 10px 0px;
+}
+.mh {
+    margin: 0px 10px;
+}
+
+.pa {
+    padding: 10px;
+}
+.pv {
+    padding: 10px 0px;
+}
+.ph {
+    padding: 0px 10px;
+}
+
+.red {
+    color: red;
+}
+
+td {
+    width: 60px;
+}
+
+.centering {
+    text-align: center;
+}
+
+
+
+/* util? */
+.nav a {
+    display: block;
+    padding: 5px 10px;
+}
+
+.nav a:hover {
+    /*border: 1px solid #666;*/
+    background-color: #DEE;
+}
+
+/*
+.nav label {
+    margin-top: -23px;
+    display: block;
+    position: absolute;
+    padding: 16px 29px;
+}
+
+.nav label:hover {
+    border: 1px solid #666;
+}
+*/

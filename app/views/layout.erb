@@ -1,0 +1,21 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="/css/main.css" />
+  <title>sinatra bbs</title>
+  </head>
+  <body>
+  <div>
+    <a href="/">top</a>
+    <a href="/entry/">/entry/</a>
+    <% if @login_user %>
+      <a href="/auth/logout">logout</a>
+      <p>login as => name:<%= @login_user.name %> id:<%= @login_user.id %></p>
+    <% else %>
+      no session
+    <% end %>
+  </div>
+  <%= yield %>
+  </body>
+</html>

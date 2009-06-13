@@ -1,0 +1,35 @@
+<div>
+<b><p>user register</p></b>
+<form method="post" action="/user/register">
+<table border="1">
+<tr><td>name</td><td><input type="text" name="post[name]" /></td></tr>
+<tr><td>password</td><td><input type="text" name="post[password]" /></td></tr>
+</table>
+<input type="submit" value="送信" />
+</form>
+</div>
+
+    <% unless @session %>
+<div>
+<b><p>login</p></b>
+<form method="post" action="/auth/login">
+<table border="1">
+<tr><td>name</td><td><input type="text" name="post[name]" /></td></tr>
+<tr><td>password</td><td><input type="text" name="post[password]" /></td></tr>
+</table>
+<input type="submit" value="送信" />
+</form>
+</div>
+    <% end %>
+
+    <div>
+<table border="1">
+    <tr><th class="nav">id</th><th>name</th><th>password</th></th>
+
+    <p>click id for edit data</p>
+    <% for user in @users %>
+      <tr><td class="centering nav"><a href="/user/edit/<%= user.id %>"><%= user.id %></a></td><td><%=h user.name %></td><td><%=h user.password %></td></tr>
+    <% end %>
+
+</table>
+    </div>

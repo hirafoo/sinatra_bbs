@@ -1,0 +1,17 @@
+<% if @user %>
+<div>
+<form method="post" action="/user/edit/<%=h @user.id %>">
+<table border="1">
+  <tr><th class="nav">id</th><th>name</th><th>password</th></th>
+  <tr>
+    <td class="centering nav"><%= @user.id %></td>
+    <td><input type="text" name="post[name]" value="<%=h @user.name %>"></td>
+    <td><input type="text" name="post[password]" value="<%=h @user.password %>"></td>
+  </tr>
+</table>
+<p><input type="submit" /></p>
+</div>
+
+<% else %>
+something wrong.
+<% end %>

@@ -1,0 +1,8 @@
+adapter: mysql
+encoding: utf8
+database: sinatra_bbs
+pool: 5
+username: root
+password:
+socket: /var/lib/mysql/mysql.sock
+
