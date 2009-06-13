@@ -3,7 +3,6 @@ before do
   page = (params[:page] ? params[:page] : 1).to_i
   (@prev, @next) = [page - 1, page + 1]
   @entries = Entry.paginate(:page => params[:page], :per_page => 10, :order => 'created_at DESC')
-  @hoge = "hogeeeeee"
 
   # limit = Time.now.advance(:hours => -9).to_s(:db)
   if request.cookies['rack.session']
