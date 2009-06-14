@@ -30,11 +30,11 @@ helpers do
   include WillPaginate::ViewHelpers
 end
 
-( Dir::glob("app/controller/*.rb") ).each do |controller|
+( Dir::glob("app/controllers/*.rb") ).each do |controller|
   load controller
 end
 
-( Dir::glob("app/model/*.rb") ).each do |model|
+( Dir::glob("app/models/*.rb") ).each do |model|
   require model
 end
 
