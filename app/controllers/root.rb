@@ -8,7 +8,9 @@ before do
   if request.cookies['rack.session']
     session_id = Digest::SHA1.hexdigest( request.cookies['rack.session'] )
     if @session = Session.find_by_session_id( session_id )
-      @login_user = @session.data[:user]
+      @login_user = @session.data
+      @login_user = Marshal.load( Base64.decode64(@login_user) )
+      @login_user = @login_user[:user]
     end
   end
 end

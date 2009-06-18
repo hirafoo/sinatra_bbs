@@ -6,6 +6,7 @@ class Session < ActiveRecord::Base
 
     if login_user = User.find_by_name_and_password( params[:name], params[:password] )
       session = {:user => login_user}
+      session = Base64.b64encode( Marshal.dump(session) )
       Session.new(:session_id => session_id, :data => session).save
 
       result = 'login ok, session create.'

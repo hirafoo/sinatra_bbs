@@ -4,7 +4,7 @@ require 'activesupport'
 require 'action_view/helpers'
 #require 'activeresource'
 #require 'actionpack'
-#require 'base64'
+require 'base64'
 #require "cgi"
 #require "cgi/session"
 require 'digest/sha1'
