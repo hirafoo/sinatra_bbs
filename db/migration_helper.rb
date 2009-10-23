@@ -4,8 +4,7 @@ module MigrationHelper
 
     execute "alter table #{from_table} add constraint #{constraint_name} foreign key (#{from_column}) references #{to_table}(id)"
   end
-
-
+end
 
 module ActiveRecord
   module ConnectionAdapters # :nodoc:
